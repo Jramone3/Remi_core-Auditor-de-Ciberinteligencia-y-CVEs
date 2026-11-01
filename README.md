@@ -34,3 +34,17 @@ Binary: remi-audit-linux
 SHA-256 Hash: 5d69f1620626cd5b4ad06e80cc0228ba8a193554ff8d1eb76323c66cc20280a7
 
 Developed by REMI_CORE Ecosystem.
+
+---
+
+## 💼 Commercial & Fiscal Compliance (Enterprise Edition)
+
+This software product is legally backed and commercialized under strict operational and compliance standards:
+
+- **Entity / Developer:** Jesús Ramón Rivas García
+- **Tax ID (RIF - Venezuela):** V050153998
+- **Fiscal Address:** Calle El Samán, Casa Nro 17, Sector Porvorín, Guayabita, Aragua.
+- **Blockchain Settlement (Base Network):** 
+  - *Network:* Base (Chain ID: 8453)
+  - *Standard EOA-Contract / Payment Gateway:* `0x96De980a766CCb10A19B6962587e2b61B650b372`
+- **Security & Cryptography:** Backed by the REMI_CORE Sovereign Bunker Architecture, ensuring immutable supply-chain verification and data privacy.
