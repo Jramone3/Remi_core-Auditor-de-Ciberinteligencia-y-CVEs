@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMI-Lite Audit Portable — Enterprise Cyber Intelligence</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #3b82f6;
+            --accent-green: #10b981;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .badge {
+            background-color: rgba(59, 130, 246, 0.2);
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .download-btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+            margin-top: 15px;
+        }
+        .download-btn:hover {
+            background-color: #2563eb;
+        }
+        code, pre {
+            background-color: #090d16;
+            color: #38bdf8;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Plug & Play Security Suite</span>
+            <h1>🛡️ REMI-Lite Audit Portable</h1>
+            <p class="subtitle">Autonomous cyber intelligence & CVE vulnerability assessment engine tailored for legacy hardware, low-resource environments, and air-gapped systems.</p>
+        </header>
+
+        <main>
+            <!-- SECCIÓN DE DESCARGA DIRECTA -->
+            <div class="card" style="text-align: center;">
+                <h2 style="margin-top: 0;">Download Standalone Binary (v1.0.0)</h2>
+                <p style="color: var(--text-muted);">Zero dependencies required. Runs natively on Linux x86_64.</p>
+                <a href="https://github.com/Jramone3/Remi_core-Auditor-de-Ciberinteligencia-y-CVEs/raw/main/remi-audit-linux" class="download-btn">
+                    ⬇️ Download remi-audit-linux
+                </a>
+                <div style="margin-top: 25px; text-align: left;">
+                    <p><strong>SHA-256 Integrity Verification:</strong></p>
+                    <pre>5d69f1620626cd5b4ad06e80cc0228ba8a193554ff8d1eb76323c66cc20280a7  remi-audit-linux</pre>
+                </div>
+            </div>
+
+            <!-- CARACTERÍSTICAS TÉCNICAS -->
+            <div class="card">
+                <h2>🚀 Key Features</h2>
+                <div class="grid">
+                    <div class="feature-box">
+                        <h4 style="margin-top:0; color: var(--accent);">Zero Dependencies</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Standalone compiled ELF binary. No Python, virtualenvs, or heavy runtimes needed.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4 style="margin-top:0; color: var(--accent-green);">Dual-Pass Verification</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Secondary heuristic engine to filter out noise and historical false positives.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4 style="margin-top:0; color: var(--accent);">Instant Reports</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Generates clean, printable HTML executive reports with clear remediation steps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESPALDO CORPORATIVO Y CUMPLIMIENTO FISCAL -->
+            <div class="card">
+                <h2>💼 Commercial & Fiscal Compliance</h2>
+                <p style="color: var(--text-muted);">Legally registered and backed under official operational standards:</p>
+                <ul>
+                    <li><strong>Developer / Entity:</strong> Jesús Ramón Rivas García</li>
+                    <li><strong>Tax ID (RIF - Venezuela):</strong> V050153998</li>
+                    <li><strong>Fiscal Address:</strong> Calle El Samán, Casa Nro 17, Sector Porvorín, Guayabita, Aragua.</li>
+                    <li><strong>Blockchain Settlement (Base Network):</strong> 
+                        <br><code>0x96De980a766CCb10A19B6962587e2b61B650b372</code> (Chain ID: 8453)</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 REMI_CORE Ecosystem. Developed by Ramón Rivas.</p>
+        </footer>
+    </div>
+</body>
+</html>
