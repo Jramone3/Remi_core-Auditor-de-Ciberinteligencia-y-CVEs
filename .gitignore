@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+!.env.example
+feeds/
+reports/
+*.html
+!index.html
+remi-audit-linux
+remi-audit-linux.sha256
