@@ -5,13 +5,14 @@ Modulo: cve_monitor.py
 ==============================================================================
 """
 
-from datetime import datetime
 import json
 import os
-from typing import Any
 import urllib.error
 import urllib.parse
 import urllib.request
+
+from datetime import datetime
+from typing import Any
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_PATH = os.path.join(BASE_DIR, "config", "security_profiles.json")
