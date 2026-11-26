@@ -8,9 +8,10 @@ Modulo: cve_monitor.py
 from datetime import datetime
 import json
 import os
+from typing import Any
+import urllib.error
 import urllib.parse
 import urllib.request
-from typing import Any
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_PATH = os.path.join(BASE_DIR, "config", "security_profiles.json")
@@ -43,9 +44,9 @@ def fetch_cve_alerts(keyword: str, cvss_min: float = 7.5) -> list[dict[str, Any]
                     cve_id = cve_data.get("id", "UNKNOWN")
                     metrics = cve_data.get("metrics", {})
                     cvss_score = 0.0
-                    if "cvssMetricV31" in metrics and metrics["cvssMetricV31"]:
+                    if metrics.get("cvssMetricV31"):
                         cvss_score = float(metrics["cvssMetricV31"][0]["cvssData"]["baseScore"])
-                    elif "cvssMetricV30" in metrics and metrics["cvssMetricV30"]:
+                    elif metrics.get("cvssMetricV30"):
                         cvss_score = float(metrics["cvssMetricV30"][0]["cvssData"]["baseScore"])
 
                     if cvss_score >= cvss_min:
@@ -63,7 +64,7 @@ def fetch_cve_alerts(keyword: str, cvss_min: float = 7.5) -> list[dict[str, Any]
                                 "description": f"{desc_text[:200]}...",
                             }
                         )
-    except Exception as exc:
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError, IndexError, OSError) as exc:
         print(f"[!] Error al consultar NVD para {keyword}: {exc}")
 
     return alerts

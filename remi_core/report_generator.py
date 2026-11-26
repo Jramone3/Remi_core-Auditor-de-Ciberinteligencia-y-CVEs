@@ -9,8 +9,9 @@ from datetime import datetime
 import glob
 import json
 import os
-import urllib.request
 from typing import Any
+import urllib.error
+import urllib.request
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDS_DIR = os.path.join(BASE_DIR, "feeds")
@@ -46,7 +47,7 @@ def send_telemetry_to_suite(report_data: dict[str, Any]) -> bool:
             if response.status == 200:
                 print("[+] ¡Telemetría entregada y procesada con éxito por la Suite!")
                 return True
-    except Exception as exc:
+    except (urllib.error.URLError, TimeoutError, ValueError, OSError) as exc:
         print(f"[!] Nota de Red / Envío a Suite: {exc}")
         print("[*] (El reporte local se guardó correctamente de forma autónoma).")
     return False

@@ -27,7 +27,7 @@ def get_installed_packages() -> dict[str, str]:
             if len(parts) == 2:
                 installed[parts[0].lower()] = parts[1]
         print(f"[+] Total de paquetes locales indexados: {len(installed)}")
-    except Exception as exc:
+    except (subprocess.SubprocessError, OSError) as exc:
         print(f"[!] Error al consultar paquetes locales con dpkg: {exc}")
     return installed
 
